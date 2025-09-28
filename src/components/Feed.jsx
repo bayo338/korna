@@ -1,7 +1,10 @@
-import { MoreHorizontal, LucideStars, MinusCircle, FaUserCircle } from "lucide-react";
+import { MoreHorizontal, LucideStars, MinusCircle} from "lucide-react";
 import { FaHandsClapping } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
 import { BsBookmarkPlus } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
+import pic1 from "../assets/pic1.jpg";
+import pic2 from "../assets/pic2.jpg";
 
 
 const posts = [
@@ -12,7 +15,7 @@ category: { name: "Language Lab", by: "Benben" },
 title: "How Knowledge of Languages Is More Valuable Than Ever on the Job Market",
 desc: "It’s not a skill issue, but a marketing issue",
 stats: { days: "5d ago", likes: "1.2K", comments: "45" },
-img: "https://via.placeholder.com/80x80.png?text=Img1",
+img: pic1,
 },
 {
 badge: "DS",
@@ -26,7 +29,7 @@ category: { name: "Level Up Coding", by: "Attila Vágó" },
 title: "Welcome To Dream-Driven Development Where Nothing Works",
 desc: "Half-baked diagrams, features that make no sense, Mikado architecture. You've seen it, you've lived it, and it has a name...",
 stats: { days: "4d ago", likes: "709", comments: "16" },
-img: "https://via.placeholder.com/80x80.png?text=Img2",
+img: pic2,
 },
 {
 badge: "P",
@@ -35,7 +38,7 @@ category: { name: "Predict", by: "iswarya writes" },
 title: "Future-Proof Careers in the Age of AI: What You Should Learn in 2026",
 desc: "What if I told you that by this time next year, you could land a job...",
 stats: { days: "Jul 30", likes: "37K", comments: "165" },
-img: "https://via.placeholder.com/80x80.png?text=Img3",
+img: pic1,
 },
 {
 badge: (
@@ -47,7 +50,7 @@ category: "Clean Compiler",
 title: "10 Java Collections Tricks Only Seniors Know",
 desc: "If you’ve been coding in Java for a while, you probably use List, Set, and Map every single day. But here's the thing:most...",
 stats: { days: "3d ago", likes: "52", comments: "5" },
-img: "https://via.placeholder.com/80x80.png?text=Img4",
+img: pic2,
 plainCategory: true, //new flag
 },
 {
@@ -57,7 +60,7 @@ category: { name: "The Generator", by: "Jim the AI Whisperer" },
 title: "Want to see how insanely stupid AI really is? Ask ChatGPT to answer these riddles in just one word",
 desc: "Limiting output length reveals AI isn’t intelligent — it’s chatty!",
 stats: { days: "3d ago", likes: "2.6K", comments: "36" },
-img: "https://via.placeholder.com/80x80.png?text=Img5",
+img: pic1,
 },
 ];
 
@@ -87,11 +90,11 @@ return (
             )}
 
             {/* Category + Badge */}
-            <p className="text-sm text-gray-500 flex items-center gap-2 flex-wrap">
+            <p className="text-sm text-gray-500 flex items-center gap-2 mb-4 flex-wrap">
                 {/* Show badge only if it exists */}
                 {post.badge && (
                 <span
-                    className={`inline-flex items-center justify-center w-6 h-6 text-white text-[10px] font-bold rounded-sm ${post.badgeColor || "bg-gray-500"}`}
+                    className={`inline-flex items-center justify-center w-6 h-6 text-white text-[10px] font-bold rounded-sm ${post.badgeColor || "bg-transparent"}`}
                 >
                     {post.badge}
                 </span>

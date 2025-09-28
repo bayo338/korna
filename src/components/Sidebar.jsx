@@ -158,6 +158,6 @@ return (
                   <a href="#" className="hover:underline">Text to speech</a>
                 </div>
               </div>
-            </aside>
+  </aside>
 );
 }
