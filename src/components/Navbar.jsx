@@ -37,12 +37,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 md:gap-4">
-          <button className="hidden lg:flex items-center gap-1 text-sm hover:text-purple-600">
+          <button className="hidden md:flex items-center gap-1 text-sm hover:text-purple-600">
             <PenSquare size={18} className="text-gray-700 hover:text-purple-600" />
             Write
           </button>
           <BellIcon className="hidden md:block w-5 h-5 hover:text-purple-600" />
-          <Search className="block sm:hidden w-5 h-5 text-gray-700 hover:text-purple-600 ml-2" />
+          <Search className="block sm:hidden w-5 h-5 text-gray-700 hover:text-purple-600 mx-4 " />
           <div className="w-8 h-8 bg-black rounded-full"></div>
         </div>
        </nav>
