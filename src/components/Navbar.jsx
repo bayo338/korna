@@ -25,7 +25,7 @@ export default function Navbar() {
 
           <div className="relative hidden sm:block">
             <Search
-              size={18}
+              size={20}
               className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-400"
             />
             <input
