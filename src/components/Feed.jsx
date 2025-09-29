@@ -80,7 +80,7 @@ export default function Feed() {
     });
   }, []);
 return (
-    <section className="space-y-8 py-8 px-4 w-full max-w-[100vw] mx-auto overflow-x-hidden lg:px-36">
+    <section className="space-y-8 py-8 px-4 w-full max-w-[100vw] mx-auto overflow-x-hidden lg:px-40">
         <div className="flex space-x-6 border-b pb-2 mb-10 text-sm">
             <button className="relative pb-2 font-medium text-gray-800">
                 For you
