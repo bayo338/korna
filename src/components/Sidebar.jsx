@@ -1,4 +1,3 @@
-// Icons
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { LucideStars } from "lucide-react";

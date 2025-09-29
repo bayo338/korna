@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Feed from "./components/Feed";
 import Sidebar from "./components/Sidebar";
 

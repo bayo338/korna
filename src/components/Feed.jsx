@@ -80,7 +80,7 @@ export default function Feed() {
     });
   }, []);
 return (
-    <section className="space-y-8 py-8 px-2 sm:px-4 lg:px-48 mx-auto">
+    <section className="space-y-8 py-8 px-4 w-full max-w-[100vw] mx-auto overflow-x-hidden lg:px-36">
         <div className="flex space-x-6 border-b pb-2 mb-10 text-sm">
             <button className="relative pb-2 font-medium text-gray-800">
                 For you
@@ -135,9 +135,9 @@ return (
                     )}
                 </p>
 
-                <div className="flex space-x-10">
+                <div className="flex space-x-4 sm:space-x-20">
                     <div>
-                        <h2 className="text-lg sm:text-xl font-extrabold mt-1 leading-snug">{post.title}</h2>
+                        <h2 className="text-sm sm:text-xl font-extrabold mt-1 leading-snug">{post.title}</h2>
                         <p className="text-gray-600 mt-1 text-sm sm:text-base line-clamp-2">{post.desc}</p>
                     </div>
 
@@ -145,7 +145,7 @@ return (
                     <img
                         src={post.img}
                         alt=""
-                        className="w-24 h-24 sm:w-28 sm:h-20 object-cover rounded-md flex-shrink-0"
+                        className="w-24 h-16 sm:w-28 sm:h-20 object-cover rounded-md flex-shrink-0"
                     />
                 </div>
 
