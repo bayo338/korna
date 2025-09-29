@@ -1,4 +1,5 @@
 // Icons
+import { useEffect, useState } from "react";
 import { MoreHorizontal, LucideStars, MinusCircle} from "lucide-react";
 import { FaHandsClapping } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
@@ -68,6 +69,16 @@ const posts = [
 
 
 export default function Feed() {
+    const [visiblePosts, setVisiblePosts] = useState([]);
+
+  // Trigger post animations one by one
+  useEffect(() => {
+    posts.forEach((_, i) => {
+      setTimeout(() => {
+        setVisiblePosts((prev) => [...prev, i]);
+      }, i * 150); // stagger delay
+    });
+  }, []);
 return (
     <section className="space-y-8 py-8 px-2 sm:px-4 lg:px-48 mx-auto">
         <div className="flex space-x-6 border-b pb-2 mb-10 text-sm">
@@ -84,7 +95,12 @@ return (
 
         {/* Posts */}
         {posts.map((post, idx) => (
-        <article key={idx} className="flex flex-col sm:flex-row items-start justify-between border-b pb-6 gap-4">
+        <article key={idx} className={`flex flex-col sm:flex-row items-start justify-between border-b pb-6 gap-4 transform transition-all duration-700 ${
+            visiblePosts.includes(idx)
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-5"
+          }`}
+        >
             <div className="flex-col">
                 {/* Author section */}
                 {post.author && (

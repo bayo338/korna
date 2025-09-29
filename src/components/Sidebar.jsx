@@ -1,10 +1,19 @@
 // Icons
+import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { LucideStars } from "lucide-react";
 
 
 export default function Sidebar() {
-    const topics = [
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  // Trigger animation on mount
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSidebar(true), 100); // small delay for smooth entry
+    return () => clearTimeout(timer);
+  }, []);
+
+  const topics = [
     "Data Science",
     "React",
     "Coding",
@@ -37,7 +46,9 @@ export default function Sidebar() {
   ];
 
 return (
-  <aside className="hidden lg:flex flex-1 flex-col space-y-8 border-l py-10 px-8 h-full">
+  <aside className={`hidden lg:flex flex-1 flex-col space-y-8 border-l py-10 px-8 h-full transition-all duration-700 ease-out transform ${
+        showSidebar ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
+      }`}>
     {/*sidebar content */}
 
     {/* Staff Picks */}
