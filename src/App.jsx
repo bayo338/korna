@@ -8,7 +8,7 @@ export default function App() {
 return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />        
-      <main className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-0 px-4 sm:px-6 lg:px-0 max-w-8xl mx-auto min-h-[calc(100vh-4rem)] w-full overflow-x-hidden">
+      <main className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-0 px-4 sm:px-6 lg:px-0 max-w-8xl mx-auto min-h-[calc(100vh-4rem)] w-full">
         <Feed />
         <Sidebar />
       </main>      
